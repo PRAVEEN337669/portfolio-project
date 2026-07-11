@@ -1,5 +1,5 @@
 import React from "react";
-import "./Projects.css";
+import "./projects.css";
 import foodieLogo from "../assets/foodie cape logo.png";
 
 const Projects = () => {
