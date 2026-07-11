@@ -1,0 +1,42 @@
+ .skills-section {
+  padding: 80px 10%;
+  background-color: #fff;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+}
+
+.blue-text {
+  color: #007bff;
+}

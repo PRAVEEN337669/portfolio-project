@@ -1,0 +1,77 @@
+ .services-section {
+  padding: 100px 10%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.services-header {
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  color: #007bff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.services-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.blue-text {
+  color: #007bff;
+}
+
+/* சர்வீஸ் கார்டுகள் அமைப்பு */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  padding: 40px;
+  background: #fcfdfe;
+  border: 1px solid #eef5ff;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  background: #007bff;
+  box-shadow: 0 20px 40px rgba(0, 123, 255, 0.2);
+}
+
+.service-card:hover h3, 
+.service-card:hover p, 
+.service-card:hover .read-more {
+  color: white;
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.service-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.read-more {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
