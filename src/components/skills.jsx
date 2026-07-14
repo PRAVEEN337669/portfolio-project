@@ -1,6 +1,5 @@
  import React from 'react';
 import "./skills.css";
-
 const Skills = () => {
   const skillsData = [
     { name: "HTML/CSS", level: "90%" },
