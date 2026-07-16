@@ -16,7 +16,7 @@ const Hero = () => {
             applications using HTML, CSS, JavaScript, React.js, and MongoDB.
           </p>
           <div className="hero-btns">
-            <a href="/my resume.m.praveen.pdf" download className="btn-main">Download My CV</a>
+            <a href="/M.PRAVEEN. my resume.pdf" download className="btn-main">Download My CV</a>
           </div>
         </div>
 
