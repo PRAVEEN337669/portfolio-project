@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_tsjzns5",
+        "template_mnurl19",
+        form.current,
+        "9QgeuVWVZ9xqUA9PF"
+      )
+      .then(
+        () => {
+          alert("✅ Message sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          alert("❌ Failed to send message.");
+          console.log(error);
+        }
+      );
+  };
+
   return (
     <section className="contact-section" id="contact">
       <div className="contact-container">
@@ -29,6 +54,7 @@ const Contact = () => {
 
             <div className="info-box">
               <h4>📱 Social</h4>
+
               <div className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/praveen-muruganantham-677713421/"
@@ -49,10 +75,23 @@ const Contact = () => {
             </div>
           </div>
 
-          <form className="contact-form">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
+          <form ref={form} onSubmit={sendEmail} className="contact-form">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+
             <textarea
+              name="message"
               placeholder="How can I help you?"
               rows="5"
               required
